@@ -1,0 +1,1 @@
+# JavaPersistenceAPI-JPA2022
