@@ -11,8 +11,13 @@ public class Assento {
 	
 	private String nome;
 	
+	@OneToOne(mappedBy = "assento")	//relação um para um 
+	private Cliente cliente;
+	
+	
 	@OneToOne
 	private Assento assento;
+	
 	public Assento() {
 		
 	}
@@ -38,7 +43,20 @@ public class Assento {
 		this.nome = nome;
 	}
 
+	public Cliente getCliente() {
+		return cliente;
+	}
 
-	
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+	public Assento getAssento() {
+		return assento;
+	}
+
+	public void setAssento(Assento assento) {
+		this.assento = assento;
+	}	
 
 }

@@ -37,6 +37,11 @@ public class DAO <E>{
 		public DAO<E> incluirAtomico(){
 			return this.abrirTransacao().incluirTransacao().fecharTransacao();
 		}
+		
+		public E obterPorID(Object id) {
+			return em.find(classe, id);
+		}
+		
 		public List<E> obterTodos(){
 			return this.obterTodos(10,0);
 		}
